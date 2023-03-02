@@ -1,17 +1,22 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title style="font-weight: bold;" class="ion-text-center">
+      CARA OU COROA
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content class="content" [fullscreen]="true">
+  <div class="container">
+    <img [src]="image">
+    <h1>{{ info }}</h1>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="btn ion-text-center">
+      Jogar a Moeda!
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

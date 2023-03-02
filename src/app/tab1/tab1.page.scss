@@ -1,0 +1,28 @@
+* {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-flow: column;
+}
+
+img {
+  height: 50%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 15px 0px rgba(150,150,150,0.75);
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(150,150,150,0.75);
+  -moz-box-shadow: 5px 5px 15px 0px rgba(150,150,150,0.75);
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.content {
+  background-color: #F7F7F7;
+}
