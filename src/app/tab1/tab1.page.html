@@ -8,15 +8,15 @@
 
 <ion-content class="content" [fullscreen]="true">
   <div class="container">
-    <img [src]="image">
-    <h1>{{ info }}</h1>
+    <img [@rotatedStated]="state" [src]="image">
+    <h4>{{ info }}</h4>
   </div>
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar>
-    <ion-title class="btn ion-text-center">
-      Jogar a Moeda!
+  <ion-toolbar (click)="throwCoin()" class="btn">
+    <ion-title class="ion-text-center">
+      Clique para jogar a Moeda
     </ion-title>
   </ion-toolbar>
 </ion-footer>

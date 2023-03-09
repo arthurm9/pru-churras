@@ -7,5 +7,58 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      <ion-label>Valendo:</ion-label>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button>1</ion-button></ion-col>
+      <ion-col><ion-button>3</ion-button></ion-col>
+      <ion-col><ion-button>6</ion-button></ion-col>
+      <ion-col><ion-button>9</ion-button></ion-col>
+      <ion-col><ion-button>12</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Time 1</p>
+        <ion-button color="success"><ion-icon name="add-outline"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col>
+        <p>Time 2</p>
+        <ion-button color="success"><ion-icon name="add-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>0</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>0</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="danger"><ion-icon name="remove-outline"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger"><ion-icon name="remove-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card>
+    <ion-card-title class="ion-text-center">PARTIDAS</ion-card-title>
+    <ion-card-content class="ion-text-center">
+      <ion-row>
+        <ion-col><ion-label>TIME 1</ion-label></ion-col>
+        <ion-col><ion-label>0</ion-label></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><ion-label>TIME 2</ion-label></ion-col>
+        <ion-col><ion-label>0</ion-label></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-button expand="block" color="warning">LIMPAR</ion-button>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
