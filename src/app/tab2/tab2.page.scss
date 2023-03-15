@@ -1,5 +1,11 @@
-ion-row:nth-child(2) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.value-title {
+  font-size: 25px;
+}
+
+.value-buttons {
+  ion-button {
+    height: 50px;
+    width: 50px;
+    --border-radius: 50%;
+  }
 }
