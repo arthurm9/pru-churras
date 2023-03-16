@@ -11,6 +11,13 @@ ion-toolbar {
   }
 }
 
+.row-1 {
+  span {
+    font-weight: bold;
+    color: var(--ion-color-red);
+  }
+}
+
 .row-2 {
   ion-button {
     height: 55px;
