@@ -1,6 +1,6 @@
-<ion-header [translucent]="true" class="ion-no-border">
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title style="font-weight: bold;" class="ion-text-center">
+    <ion-title class="ion-text-center">
       CONTADOR DE TRUCO
     </ion-title>
   </ion-toolbar>
@@ -8,45 +8,52 @@
 
 <ion-content class="ion-padding" [fullscreen]="true">
   <ion-grid class="grid">
-    <ion-row>
-      <ion-label class="value-title">Valendo:</ion-label>
+    <ion-row class="row-1">
+      <ion-label>Valendo:</ion-label>
     </ion-row>
-    <ion-row class="value-buttons">
+    <ion-row class="row-2">
       <ion-col><ion-button>1</ion-button></ion-col>
       <ion-col><ion-button>3</ion-button></ion-col>
       <ion-col><ion-button>6</ion-button></ion-col>
       <ion-col><ion-button>9</ion-button></ion-col>
       <ion-col><ion-button>12</ion-button></ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row class="row-3">
       <ion-col>
-        <ion-label>Time 1</ion-label>
-        <ion-button color="success"><ion-icon name="add-outline"></ion-icon></ion-button>
-        <ion-label>0</ion-label>
-        <ion-button color="danger"><ion-icon name="remove-outline"></ion-icon></ion-button>
+        <ion-label>NÓS</ion-label>
+        <ion-button class="add-button"><ion-icon name="add-outline"></ion-icon></ion-button>
+        <h1>0</h1>
+        <ion-button class="remove-button"><ion-icon name="remove-outline"></ion-icon></ion-button>
       </ion-col>
       <ion-col>
-        <ion-label>Time 2</ion-label>
-        <ion-button color="success"><ion-icon name="add-outline"></ion-icon></ion-button>
-        <ion-label>0</ion-label>
-        <ion-button color="danger"><ion-icon name="remove-outline"></ion-icon></ion-button>
+        <ion-label>ELES</ion-label>
+        <ion-button class="add-button"><ion-icon name="add-outline"></ion-icon></ion-button>
+        <h1>0</h1>
+        <ion-button class="remove-button"><ion-icon name="remove-outline"></ion-icon></ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
+</ion-content>
+<ion-footer>
   <ion-card>
-    <ion-card-title class="ion-text-center">PARTIDAS</ion-card-title>
+    <ion-card-title class="ion-text-center">PARTIDAS<ion-icon name="trophy"></ion-icon></ion-card-title>
     <ion-card-content class="ion-text-center">
       <ion-row>
-        <ion-col><ion-label>TIME 1</ion-label></ion-col>
-        <ion-col><ion-label>0</ion-label></ion-col>
+        <ion-col>
+          <ion-label>NÓS</ion-label>
+        </ion-col>
+        <ion-col><h1>0</h1></ion-col>
       </ion-row>
+      <hr>
       <ion-row>
-        <ion-col><ion-label>TIME 2</ion-label></ion-col>
-        <ion-col><ion-label>0</ion-label></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-button expand="block" color="warning">LIMPAR</ion-button>
+        <ion-col>
+          <ion-label>ELES</ion-label>
+        </ion-col>
+        <ion-col><h1>0</h1></ion-col>
       </ion-row>
     </ion-card-content>
   </ion-card>
-</ion-content>
+  <div class="clear-button">
+    <ion-button><ion-label>LIMPAR</ion-label></ion-button>
+  </div>
+</ion-footer>

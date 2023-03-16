@@ -1,11 +1,126 @@
-.value-title {
-  font-size: 25px;
+ion-label {
+  font-size: 20px;
+  ion-label:nth-child(2) {
+    margin-bottom: 20px;
+  }
 }
 
-.value-buttons {
+ion-toolbar {
+  ion-title {
+    font-weight: bold;
+  }
+}
+
+.row-2 {
   ion-button {
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
+    --border-radius: 50%;
+    --background: var(--ion-color-dark-gray);
+    font-size: 20px;
+  }
+}
+
+.row-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .add-button {
+    margin-top: 20px;
+    --background: var(--ion-color-green);
+  }
+
+  .remove-button {
+    --background: var(--ion-color-red);
+  }
+
+  ion-label{
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  h1 {
+    color: var(--ion-color-light-gray);
+  }
+
+  ion-button {
+    height: 60px;
+    width: 60px;
     --border-radius: 50%;
   }
+
+  ion-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ion-col {
+    margin-top: 20px;
+  }
+}
+
+ion-card {
+  ion-card-title {
+    color: var(--ion-color-dark-gray);
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    ion-icon {
+      margin-left: 15px;
+      color: var(--ion-color-warning);
+      font-weight: bold;
+      font-size: 25px;
+    }
+  }
+
+  h1 {
+    color: var(--ion-color-light-gray);
+  }
+
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  --background: var(--ion-color-white);
+
+  ion-card-content {
+    ion-label {
+      font-size: 20px;
+      color: var(--ion-color-red);
+      font-weight: bold;
+    }
+  }
+}
+
+ion-footer {
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  ion-button {
+    ion-label {
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+}
+
+.clear-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ion-button {
+    width: 95%;
+    --background: var(--ion-color-dark-gray);
+    ion-label {
+      color: var(--ion-color-white);
+    }
+  }
+}
+
+hr {
+  border: 1px solid var(--ion-color-light-gray);
+  background-color: var(--ion-color-light-gray);
 }
