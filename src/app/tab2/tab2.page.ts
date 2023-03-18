@@ -9,7 +9,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class Tab2Page {
 
-  constructor(private alertController: AlertController, private toastController: ToastController) {}
+  constructor(private alertController: AlertController, private toastController: ToastController) { }
 
   async showAlert(title: string, message: string) {
     const alert = await this.alertController.create({
@@ -31,13 +31,13 @@ export class Tab2Page {
     await toast.present();
   }
 
-  value = 1; // valor truco
+  value = 1;
   wePoints = 0;
   theyPoints = 0;
   weWins = 0;
   theyWins = 0;
 
-  changeValue(value:number) {
+  changeValue(value: number) {
     if (this.value < value) {
       this.value = value;
     }
@@ -46,7 +46,7 @@ export class Tab2Page {
   increaseWePoints() {
     this.wePoints += this.value;
     this.value = 1;
-    if(this.wePoints > 12 || this.wePoints === 12) {
+    if (this.wePoints > 12 || this.wePoints === 12) {
       this.weWins += 1;
       this.theyPoints = 0;
       this.wePoints = 0;
@@ -58,7 +58,7 @@ export class Tab2Page {
   increaseTheyPoints() {
     this.theyPoints += this.value;
     this.value = 1;
-    if(this.theyPoints > 12 || this.theyPoints === 12) {
+    if (this.theyPoints > 12 || this.theyPoints === 12) {
       this.theyWins += 1;
       this.theyPoints = 0;
       this.wePoints = 0;
@@ -70,7 +70,7 @@ export class Tab2Page {
   decreaseWePoints() {
     this.wePoints -= this.value;
     this.value = 1;
-    if(this.wePoints < 0) {
+    if (this.wePoints < 0) {
       this.wePoints = 0;
     }
   }
@@ -78,7 +78,7 @@ export class Tab2Page {
   decreaseTheyPoints() {
     this.theyPoints -= this.value;
     this.value = 1;
-    if(this.theyPoints < 0) {
+    if (this.theyPoints < 0) {
       this.theyPoints = 0;
     }
   }

@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="ion-text-center">
+    <ion-title slot="start">
       CONTADOR DE TRUCO
     </ion-title>
+    <img src="https://static.thenounproject.com/png/117892-200.png" alt="">
   </ion-toolbar>
 </ion-header>
 
@@ -12,24 +13,28 @@
       <ion-label>Valendo: <span> {{ value }} </span></ion-label>
     </ion-row>
     <ion-row class="row-2">
-      <ion-col><ion-button (click)="changeValue(1)">1</ion-button></ion-col>
-      <ion-col><ion-button (click)="changeValue(3)">3</ion-button></ion-col>
-      <ion-col><ion-button (click)="changeValue(6)">6</ion-button></ion-col>
-      <ion-col><ion-button (click)="changeValue(9)">9</ion-button></ion-col>
-      <ion-col><ion-button (click)="changeValue(12)">12</ion-button></ion-col>
+      <ion-col><ion-button id="button-1" (click)="changeValue(1)">1</ion-button></ion-col>
+      <ion-col><ion-button id="button-2" (click)="changeValue(3)">3</ion-button></ion-col>
+      <ion-col><ion-button id="button-3" (click)="changeValue(6)">6</ion-button></ion-col>
+      <ion-col><ion-button id="button-4" (click)="changeValue(9)">9</ion-button></ion-col>
+      <ion-col><ion-button id="button-5" (click)="changeValue(12)">12</ion-button></ion-col>
     </ion-row>
     <ion-row class="row-3">
       <ion-col>
         <ion-label>NÓS</ion-label>
-        <ion-button class="add-button" (click)="increaseWePoints()"><ion-icon name="add-outline"></ion-icon></ion-button>
+        <ion-button fill="clear" class="add-button" (click)="increaseWePoints()"><img src="../../assets/heart1.png"
+            alt=""></ion-button>
         <h1> {{ wePoints }} </h1>
-        <ion-button class="remove-button" (click)="decreaseWePoints()"><ion-icon name="remove-outline"></ion-icon></ion-button>
+        <ion-button fill="clear" class="remove-button" (click)="decreaseWePoints()"><img
+            src="../../assets/zap-inverse.png" alt=""></ion-button>
       </ion-col>
       <ion-col>
         <ion-label>ELES</ion-label>
-        <ion-button class="add-button" (click)="increaseTheyPoints()"><ion-icon name="add-outline"></ion-icon></ion-button>
+        <ion-button fill="clear" class="add-button" (click)="increaseTheyPoints()"><img src="../../assets/zap.png"
+            alt=""></ion-button>
         <h1> {{ theyPoints}} </h1>
-        <ion-button class="remove-button" (click)="decreaseTheyPoints()"><ion-icon name="remove-outline"></ion-icon></ion-button>
+        <ion-button fill="clear" class="remove-button" (click)="decreaseTheyPoints()"><img
+            src="../../assets/heart-inverse.png" alt=""></ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -42,14 +47,18 @@
         <ion-col>
           <ion-label>NÓS</ion-label>
         </ion-col>
-        <ion-col><h1> {{ weWins }} </h1></ion-col>
+        <ion-col>
+          <h1> {{ weWins }} </h1>
+        </ion-col>
       </ion-row>
       <hr>
       <ion-row>
         <ion-col>
           <ion-label>ELES</ion-label>
         </ion-col>
-        <ion-col><h1> {{ theyWins }} </h1></ion-col>
+        <ion-col>
+          <h1> {{ theyWins }} </h1>
+        </ion-col>
       </ion-row>
     </ion-card-content>
   </ion-card>
