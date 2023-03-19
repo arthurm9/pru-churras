@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-tab2',
@@ -36,11 +37,57 @@ export class Tab2Page {
   theyPoints = 0;
   weWins = 0;
   theyWins = 0;
+  changeColor = document.querySelector('counter') as HTMLElement;
+
+  buttonState1 = 'outline';
+  buttonState2 = 'solid';
+  buttonState3 = 'solid';
+  buttonState4 = 'solid';
+  buttonState5 = 'solid';
+
+  resetButtonState () {
+    this.buttonState1 = 'solid';
+    this.buttonState2 = 'solid';
+    this.buttonState3 = 'solid';
+    this.buttonState4 = 'solid';
+    this.buttonState5 = 'solid';
+  }
 
   changeValue(value: number) {
     if (this.value < value) {
       this.value = value;
+      this.resetButtonState();
+      if(this.changeColor) {
+        this.changeColor.style.color = 'red';
+      }
+      if (value === 1) {
+        this.buttonState1 = 'outline';
+      } else if (value === 3) {
+        this.buttonState2 = 'outline';
+        this.disableOtherButtons('button-2');
+      } else if (value === 6) {
+        this.buttonState3 = 'outline';
+        this.disableOtherButtons('button-3');
+      } else if (value === 9) {
+        this.buttonState4 = 'outline';
+        this.disableOtherButtons('button-4');
+      } else if (value === 12) {
+        this.buttonState5 = 'outline';
+        this.disableOtherButtons('button-5');
+      }
     }
+  }
+
+  disableOtherButtons(clickedButtonId: string) {
+    const buttonIds = ['button-1', 'button-2', 'button-3', 'button-4', 'button-5'];
+    buttonIds.forEach((buttonId) => {
+      if (buttonId < clickedButtonId) {
+        const buttonElement = document.getElementById(buttonId);
+        if (buttonElement) {
+          buttonElement.setAttribute('disabled', '');
+        }
+      }
+    });
   }
 
   increaseWePoints() {
@@ -90,5 +137,6 @@ export class Tab2Page {
     this.weWins = 0;
     this.theyWins = 0;
     this.showToast('bottom');
+    this.resetButtonState();
   }
 }

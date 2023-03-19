@@ -24,6 +24,7 @@ ion-toolbar {
   span {
     font-weight: bold;
     color: var(--ion-color-red);
+    font-size: 30px;
   }
 }
 
@@ -33,11 +34,8 @@ ion-toolbar {
     width: 55px;
     --border-radius: 50%;
     --background: var(--ion-color-dark-gray);
+    --ion-button-fill-background: var(--ion-color-red);
     font-size: 20px;
-  }
-  ion-button.active {
-    --background: var(--ion-color-light-gray);
-    color: #959595;
   }
 }
 
