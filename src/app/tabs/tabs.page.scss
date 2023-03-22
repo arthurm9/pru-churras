@@ -1,1 +1,12 @@
+ion-tab-bar {
+  --border: none;
+}
 
+ion-tab-button {
+  --color-selected: var(--ion-color-red);
+  --ripple-color: var(--ion-color-red);
+
+  ion-icon {
+    --color-selected: var(--ion-color-red);
+  }
+}

@@ -29,4 +29,23 @@ ion-tab-bar {
   --background: var(--ion-color-white);
 }
 
+ion-toast.custom-toast {
+  --background: var(--ion-color-red);
+  --box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  --color: var(--ion-color-white);
+}
+
+ion-toast.custom-toast::part(button) {
+  border-left: 1px solid #d2d2d2;
+  color: #030207;
+  font-size: 15px;
+}
+
+ion-alert.custom-alert {
+  --background: var(--ion-color-red);
+  color: var(--ion-color-white);
+}
+
+
+
 

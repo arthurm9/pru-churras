@@ -15,6 +15,7 @@ export class Tab2Page {
   async showAlert(title: string, message: string) {
     const alert = await this.alertController.create({
       header: title,
+      cssClass: 'custom-alert',
       message: message,
       buttons: ['Ok'],
     });
@@ -24,6 +25,7 @@ export class Tab2Page {
   async showToast(position: 'bottom') {
     const toast = await this.toastController.create({
       message: 'Os dados foram limpos.',
+      cssClass: 'custom-toast',
       duration: 1000,
       position: position,
       icon: 'warning'
@@ -73,6 +75,10 @@ export class Tab2Page {
         this.buttonState5 = 'outline';
         this.disableOtherButtons('button-5');
       }
+    } else {
+      this.enableButtons();
+      this.resetButtonState();
+      this.value = 1;
     }
   }
 
@@ -99,6 +105,8 @@ export class Tab2Page {
   increaseWePoints() {
     this.wePoints += this.value;
     this.value = 1;
+    this.enableButtons();
+    this.resetButtonState();
     if (this.wePoints > 12 || this.wePoints === 12) {
       this.weWins += 1;
       this.theyPoints = 0;
@@ -111,6 +119,8 @@ export class Tab2Page {
   increaseTheyPoints() {
     this.theyPoints += this.value;
     this.value = 1;
+    this.enableButtons();
+    this.resetButtonState();
     if (this.theyPoints > 12 || this.theyPoints === 12) {
       this.theyWins += 1;
       this.theyPoints = 0;
@@ -123,6 +133,8 @@ export class Tab2Page {
   decreaseWePoints() {
     this.wePoints -= this.value;
     this.value = 1;
+    this.enableButtons();
+    this.resetButtonState();
     if (this.wePoints < 0) {
       this.wePoints = 0;
     }
@@ -131,6 +143,8 @@ export class Tab2Page {
   decreaseTheyPoints() {
     this.theyPoints -= this.value;
     this.value = 1;
+    this.enableButtons();
+    this.resetButtonState();
     if (this.theyPoints < 0) {
       this.theyPoints = 0;
     }
