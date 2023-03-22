@@ -37,7 +37,6 @@ export class Tab2Page {
   theyPoints = 0;
   weWins = 0;
   theyWins = 0;
-  changeColor = document.querySelector('counter') as HTMLElement;
 
   buttonState1 = 'outline';
   buttonState2 = 'solid';
@@ -45,7 +44,9 @@ export class Tab2Page {
   buttonState4 = 'solid';
   buttonState5 = 'solid';
 
-  resetButtonState () {
+  buttonIds = ['button-1', 'button-2', 'button-3', 'button-4', 'button-5'];
+
+  resetButtonState() {
     this.buttonState1 = 'solid';
     this.buttonState2 = 'solid';
     this.buttonState3 = 'solid';
@@ -57,9 +58,6 @@ export class Tab2Page {
     if (this.value < value) {
       this.value = value;
       this.resetButtonState();
-      if(this.changeColor) {
-        this.changeColor.style.color = 'red';
-      }
       if (value === 1) {
         this.buttonState1 = 'outline';
       } else if (value === 3) {
@@ -79,8 +77,7 @@ export class Tab2Page {
   }
 
   disableOtherButtons(clickedButtonId: string) {
-    const buttonIds = ['button-1', 'button-2', 'button-3', 'button-4', 'button-5'];
-    buttonIds.forEach((buttonId) => {
+    this.buttonIds.forEach((buttonId) => {
       if (buttonId < clickedButtonId) {
         const buttonElement = document.getElementById(buttonId);
         if (buttonElement) {
@@ -89,6 +86,15 @@ export class Tab2Page {
       }
     });
   }
+
+  enableButtons() {
+    this.buttonIds.forEach((buttonId) => {
+      const buttonElement = document.getElementById(buttonId);
+      if (buttonElement) {
+        buttonElement.setAttribute('disabled', 'false');
+      }
+    });
+  };
 
   increaseWePoints() {
     this.wePoints += this.value;
@@ -138,5 +144,6 @@ export class Tab2Page {
     this.theyWins = 0;
     this.showToast('bottom');
     this.resetButtonState();
+    this.enableButtons();
   }
 }

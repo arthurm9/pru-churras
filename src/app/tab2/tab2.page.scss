@@ -21,6 +21,11 @@ ion-toolbar {
 }
 
 .row-1 {
+  ion-label {
+    font-size: 25px;
+    font-weight:700;
+  }
+
   span {
     font-weight: bold;
     color: var(--ion-color-red);
@@ -30,12 +35,17 @@ ion-toolbar {
 
 .row-2 {
   ion-button {
+    color: white;
     height: 55px;
     width: 55px;
     --border-radius: 50%;
     --background: var(--ion-color-dark-gray);
-    --ion-button-fill-background: var(--ion-color-red);
     font-size: 20px;
+    --border-color: var(--ion-color-red);
+    --color-activated: var(--ion-color-red);
+    --color-focused: var(--ion-color-red);
+    --color-hover: var(--ion-color-red);
+    --ripple-color: var(--ion-color-red);
   }
 }
 
