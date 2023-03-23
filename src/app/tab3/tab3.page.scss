@@ -1,0 +1,15 @@
+.diceStatic {
+  height: 100%;
+  width: 100%;
+}
+
+.throwButton {
+  --background: var(--ion-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ion-label {
+    color: var(--ion-color-white);
+  }
+}
+

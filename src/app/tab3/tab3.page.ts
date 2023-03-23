@@ -9,4 +9,9 @@ export class Tab3Page {
 
   constructor() {}
 
+  img = '../../assets/dice.png'
+  gif = '../../assets/dice-gif.gif'
+  value = 1
+  size = 1
+
 }

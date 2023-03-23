@@ -1,11 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      ROLAGEM DE DADOS
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content class="ion-no-border" [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label>Qual o tamanho do dado?</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <img src="../../assets/dice.png" alt="" class="diceStatic">
+      <ion-label> <!--{{ value }}--> </ion-label>
+    </ion-item>
+    <ion-button class="throwButton"><ion-label>Jogar</ion-label></ion-button>
+  </ion-list>
 </ion-content>

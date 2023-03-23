@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
-import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-tab2',
@@ -15,9 +14,14 @@ export class Tab2Page {
   async showAlert(title: string, message: string) {
     const alert = await this.alertController.create({
       header: title,
-      cssClass: 'custom-alert',
+      cssClass: 'alertCustomCss',
       message: message,
-      buttons: ['Ok'],
+      buttons: [
+        {
+          text: 'Ok',
+          cssClass: 'confirmCustomCss',
+        }
+        ],
     });
     await alert.present();
   }
